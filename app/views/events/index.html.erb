@@ -1,0 +1,9 @@
+<%= link_to "Adicionar evento", new_event_path %>
+<ul>
+<% collection.each do |event| %>
+  <li>
+    <%= event.to_s %>
+    <%= link_to "Editar evento", edit_event_path(event.id) %>
+  </li>
+<% end %>
+</ul>
